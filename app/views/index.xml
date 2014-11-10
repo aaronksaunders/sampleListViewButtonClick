@@ -1,0 +1,15 @@
+<Alloy>
+    <Window id="mainWindow">
+        <ListView id="list" defaultItemTemplate='default_template'>
+            <Templates>
+                <ItemTemplate id="default_template"  name="default_template" >
+                    <Button id="update" onClick="itemClicked" title="update" right='10dp'/>
+                    <Label id="model" bindId="model" left='10dp'/>
+                </ItemTemplate>
+            </Templates>
+            <ListSection dataCollection="cars" >
+                <ListItem template="default_template" model:text="{model}"  model_id="{id}"/>
+            </ListSection>
+        </ListView>
+    </Window>
+</Alloy>
